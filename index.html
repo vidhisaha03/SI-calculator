@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simple Interest Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+  <div class="calculator">
+    <h2>SIMPLE INTEREST CALCULATOR</h2>
+    <label for="amount">Principal amount</label>
+    <br>
+    <input type="number" placeholder="Enter Principal Amount" id="amount">
+    <br>
+    <label for="rate">Rate (%)</label>
+    <br>
+    <input type="number" placeholder="Enter Rate" id="rate">
+    <br>
+    <label for="time">Time( in years)</label>
+    <br>
+    <input type="number" placeholder="Enter Time" id="time">
+    <br>
+    <br>
+    <button onclick="answer()">Calculate</button>
+    <p>Total interest : <span id="n1"></span></p>
+    <p>Total amount : <span id="n2"></span></p>
+    
+  
+  </div>
+  
+  <script src="script.js"></script>
+  <script>
+    function answer(){
+      var amount_inp=parseInt(document.getElementById("amount").value);
+      var rate_inp=parseInt(document.getElementById("rate").value);
+      var time_inp=parseInt(document.getElementById("time").value);
+
+      var interest=amount_inp*rate_inp*time_inp/100;
+      var total=interest+amount_inp;
+
+      document.getElementById("n1").innerHTML=interest;
+      document.getElementById("n2").innerHTML=total;
+
+
+    }
+  </script>
+
+
+    
+    
+
+</body>
+
+</html>
